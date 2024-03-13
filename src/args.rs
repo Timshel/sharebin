@@ -37,9 +37,6 @@ pub struct Args {
     #[clap(long, env = "SHAREBIN_HIDE_HEADER")]
     pub hide_header: bool,
 
-    #[clap(long, env = "SHAREBIN_HIDE_LOGO")]
-    pub hide_logo: bool,
-
     #[clap(long, env = "SHAREBIN_NO_LISTING")]
     pub no_listing: bool,
 
@@ -174,7 +171,6 @@ impl Args {
             footer_text: self.footer_text,
             hide_footer: self.hide_footer,
             hide_header: self.hide_header,
-            hide_logo: self.hide_logo,
             no_listing: self.no_listing,
             highlightsyntax: self.highlightsyntax,
             port: self.port,
