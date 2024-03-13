@@ -34,7 +34,7 @@ fn send_telemetry() -> Result<(), reqwest::Error> {
 
     // Send the telemetry data to the API
     reqwest::blocking::Client::new()
-        .post("https://api.microbin.eu/telemetry/")
+        .post("https://api.sharebin.eu/telemetry/")
         .header("Content-Type", "application/json")
         .body(json_body)
         .send()?;

@@ -1,14 +1,14 @@
 [package]
-name = "microbin"
+name = "sharebin"
 version = "2.0.4"
 edition = "2021"
-authors = ["Daniel Szabo <daniel@microbin.eu>"]
+authors = ["Timshel"]
 license = "BSD-3-Clause"
 description = "Simple, performant, configurable, entirely self-contained Pastebin and URL shortener."
 readme = "README.md"
-homepage = "https://microbin.eu"
-repository = "https://github.com/szabodanika/microbin"
-keywords = ["pastebin", "filesharing", "microbin", "actix", "selfhosted"]
+homepage = "https://github.com/timshel/sharebin"
+repository = "https://github.com/timshel/sharebin"
+keywords = ["pastebin", "filesharing", "sharebin", "actix", "selfhosted"]
 categories = ["pastebins"]
 
 [dependencies]

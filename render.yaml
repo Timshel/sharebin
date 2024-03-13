@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: microbin
+    name: sharebin
     plan: free
     numInstances: 1
     env: rust
-    repo: https://github.com/szabodanika/microbin.git
+    repo: https://github.com/timshel/sharebin.git
     buildCommand: cargo build --release
-    startCommand: ./target/release/microbin --editable --highlightsyntax
+    startCommand: ./target/release/sharebin --editable --highlightsyntax

@@ -70,7 +70,7 @@ async fn main() -> std::io::Result<()> {
         .init();
 
     log::info!(
-        "MicroBin starting on http://{}:{}",
+        "ShareBin starting on http://{}:{}",
         ARGS.bind.to_string(),
         ARGS.port.to_string()
     );

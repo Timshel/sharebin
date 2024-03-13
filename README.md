@@ -1,44 +1,21 @@
 
 ![Screenshot](.github/index.png)
 
-# MicroBin
+# ShareBin
 
-![Build](https://github.com/szabodanika/microbin/actions/workflows/rust.yml/badge.svg)
-[![crates.io](https://img.shields.io/crates/v/microbin.svg)](https://crates.io/crates/microbin)
-[![Docker Image](https://github.com/szabodanika/microbin/actions/workflows/release.yml/badge.svg)](https://hub.docker.com/r/danielszabo99/microbin)
-[![Docker Pulls](https://img.shields.io/docker/pulls/danielszabo99/microbin?label=Docker%20pulls)](https://img.shields.io/docker/pulls/danielszabo99/microbin?label=Docker%20pulls)
-[![Support Server](https://img.shields.io/discord/662017309162078267.svg?color=7289da&label=Discord&logo=discord&style=flat-square)](https://discord.gg/3DsyTN7T)
+![Build](https://github.com/timshel/sharebin/actions/workflows/rust.yml/badge.svg)
+[![Docker Image](https://github.com/timshel/sharebin/actions/workflows/release.yml/badge.svg)](https://hub.docker.com/r/timshel/sharebin)
+[![Docker Pulls](https://img.shields.io/docker/pulls/timshel/sharebin?label=Docker%20pulls)](https://img.shields.io/docker/pulls/timshel/sharebin?label=Docker%20pulls)
 
-MicroBin is a super tiny, feature rich, configurable, self-contained and self-hosted paste bin web application. It is very easy to set up and use, and will only require a few megabytes of memory and disk storage. It takes only a couple minutes to set it up, why not give it a try now?
+ShareBin is a super tiny, feature rich, configurable, self-contained and self-hosted paste bin web application. It is very easy to set up and use, and will only require a few megabytes of memory and disk storage. It takes only a couple minutes to set it up, why not give it a try now?
 
-### Check out the Public Test Server at [pub.microbin.eu](https://pub.microbin.eu)!
+## Forked
 
-### Or host MicroBin yourself
-
-Run our quick docker setup script ([DockerHub](https://hub.docker.com/r/danielszabo99/microbin)):
-```bash
-bash <(curl -s https://microbin.eu/docker.sh)
-```
-
-Or install it manually from [Cargo](https://crates.io/crates/microbin):
-
-```bash
-cargo install microbin;
-curl -L -O https://raw.githubusercontent.com/szabodanika/microbin/master/.env;
-source .env;
-microbin
-```
-
-On our website [microbin.eu](https://microbin.eu) you will find the following:
-
-- [Screenshots](https://microbin.eu/screenshots/)
-- [Guide and Documentation](https://microbin.eu/docs/intro)
-- [Donations and Sponsorships](https://microbin.eu/sponsorship)
-- [Roadmap](https://microbin.eu/roadmap)
+This a Fork of [MicroBin](https://github.com/szabodanika/microbin) made by Dániel Szabó.
 
 ## Features
 
-- Entirely self-contained executable, MicroBin is a single file!
+- Entirely self-contained executable, ShareBin is a single file!
 - Server-side and client-side encryption
 - File uploads (eg. `server.com/file/pig-dog-cat`)
 - Raw text serving (eg. `server.com/raw/pig-dog-cat`)
@@ -52,15 +29,15 @@ On our website [microbin.eu](https://microbin.eu) you will find the following:
 
 ## What is an upload?
 
-In MicroBin, an upload can be:
+In ShareBin, an upload can be:
 
 - A text that you want to paste from one machine to another, eg. some code,
 - A file that you want to share, eg. a video that is too large for Discord, a zip with a code project in it or an image,
 - A URL redirection.
 
-## When is MicroBin useful?
+## When is ShareBin useful?
 
-You can use MicroBin:
+You can use ShareBin:
 
 - To send long texts to other people,
 - To send large files to other people,
@@ -73,6 +50,4 @@ You can use MicroBin:
 
 ...and many other things, why not get creative?
 
-MicroBin and MicroBin.eu are available under the [BSD 3-Clause License](LICENSE).
-
-© Dániel Szabó 2022-2023
+ShareBin is available under the [BSD 3-Clause License](LICENSE).

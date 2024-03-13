@@ -9,18 +9,18 @@ else
 fi
 
 # Get installation directory from user
-echo -e "\033[1mEnter installation directory (default is /usr/share/microbin):\033[0m"
+echo -e "\033[1mEnter installation directory (default is /usr/share/sharebin):\033[0m"
 read install_dir
-install_dir=${install_dir:-/usr/share/microbin}
+install_dir=${install_dir:-/usr/share/sharebin}
 
 # Create directory and download files
 mkdir -p $install_dir
 cd $install_dir
-$download_command https://raw.githubusercontent.com/szabodanika/microbin/master/.env
-$download_command https://raw.githubusercontent.com/szabodanika/microbin/master/compose.yaml
+$download_command https://raw.githubusercontent.com/timshel/sharebin/master/.env
+$download_command https://raw.githubusercontent.com/timshel/sharebin/master/compose.yaml
 
 # Get public path URL and port from user
-echo -e "\033[1mEnter public path URL (e.g. https://microbin.myserver.net or http://localhost:8080):\033[0m"
+echo -e "\033[1mEnter public path URL (e.g. https://sharebin.myserver.net or http://localhost:8080):\033[0m"
 read public_path
 
 echo -e "\033[1mEnter port number (default is 8080):\033[0m"
@@ -28,8 +28,8 @@ read port
 port=${port:-8080}
 
 # Update environment variables in .env file
-sed -i "s|MICROBIN_PUBLIC_PATH=.*|MICROBIN_PUBLIC_PATH=${public_path}|" .env
-sed -i "s|MICROBIN_PORT=.*|MICROBIN_PORT=${port}|" .env
+sed -i "s|SHAREBIN_PUBLIC_PATH=.*|SHAREBIN_PUBLIC_PATH=${public_path}|" .env
+sed -i "s|SHAREBIN_PORT=.*|SHAREBIN_PORT=${port}|" .env
 
-# Start Microbin using Docker Compose
+# Start ShareBin using Docker Compose
 docker compose --env-file .env up --detach

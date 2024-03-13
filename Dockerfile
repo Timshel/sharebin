@@ -16,7 +16,7 @@ RUN \
 # https://hub.docker.com/r/bitnami/minideb
 FROM bitnami/minideb:latest
 
-# microbin will be in /app
+# sharebin will be in /app
 WORKDIR /app
 
 RUN mkdir -p /usr/share/zoneinfo
@@ -32,10 +32,10 @@ COPY --from=build \
 
 # copy built executable
 COPY --from=build \
-  /app/target/release/microbin \
-  /usr/bin/microbin
+  /app/target/release/sharebin \
+  /usr/bin/sharebin
 
 # Expose webport used for the webserver to the docker runtime
 EXPOSE 8080
 
-ENTRYPOINT ["microbin"]
+ENTRYPOINT ["sharebin"]

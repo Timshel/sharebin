@@ -1604,7 +1604,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "microbin"
+name = "sharebin"
 version = "2.0.4"
 dependencies = [
  "actix-files",
