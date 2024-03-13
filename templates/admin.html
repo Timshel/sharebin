@@ -30,10 +30,7 @@
 
 <h4>Update</h4>
 {% if update.is_some() %}
-<p><b>Update available</b> {{update.as_ref().unwrap().long_title}}</p>
-<p><b>Date</b> {{update.as_ref().unwrap().date}}</p>
-<p><b>Update type</b> {{update.as_ref().unwrap().update_type}}</p>
-<p><b>Description</b> {{update.as_ref().unwrap().description}}</p>
+<p><b>Update available</b> {{update.as_ref().unwrap().name}}</p>
 {%- else %}
 <p>No updates available.</p>
 {%- endif %}

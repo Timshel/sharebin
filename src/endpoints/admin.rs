@@ -73,30 +73,18 @@ pub async fn post_admin(
         message = "Warning: You are using the default admin login details. This is a security risk, please change them."
     }
 
-    let update;
-
-    if !ARGS.disable_update_checking {
-        let latest_version_res = fetch_latest_version().await;
-        if latest_version_res.is_ok() {
-            let latest_version = latest_version_res.unwrap();
-            if latest_version.newer_than_current() {
-                update = Some(latest_version);
-            } else {
-                update = None;
-            }
-        } else {
-            update = None;
-        }
+    let update = if !ARGS.disable_update_checking {
+        fetch_latest_version().await
     } else {
-        update = None;
-    }
+        None
+    };
 
     Ok(HttpResponse::Ok().content_type("text/html").body(
         AdminTemplate {
             pastas: &pastas,
             args: &ARGS,
             status: &String::from(status),
-            version_string: &format!("{}", CURRENT_VERSION.long_title),
+            version_string: &format!("{}", CURRENT_VERSION.name),
             message: &String::from(message),
             update: &update,
         }

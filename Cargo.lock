@@ -1604,40 +1604,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "sharebin"
-version = "2.0.4"
-dependencies = [
- "actix-files",
- "actix-multipart",
- "actix-web",
- "actix-web-httpauth",
- "askama",
- "askama-filters",
- "bytesize",
- "chrono",
- "clap",
- "env_logger",
- "futures",
- "harsh",
- "html-escape",
- "lazy_static",
- "linkify",
- "log",
- "magic-crypt",
- "mime_guess",
- "openssl",
- "qrcode-generator",
- "rand",
- "reqwest",
- "rusqlite",
- "rust-embed",
- "sanitize-filename",
- "serde",
- "serde_json",
- "syntect",
-]
-
-[[package]]
 name = "mime"
 version = "0.3.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1774,9 +1740,9 @@ dependencies = [
 
 [[package]]
 name = "once_cell"
-version = "1.15.0"
+version = "1.19.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e82dad04139b71a90c080c8463fe0dc7902db5192d939bd0950f074d014339e1"
+checksum = "3fdb12b2476b595f9358c5161aa467c2438859caa136dec86c26fdd2efe17b92"
 
 [[package]]
 name = "onig"
@@ -2396,6 +2362,41 @@ dependencies = [
  "cfg-if",
  "cpufeatures",
  "digest 0.10.5",
+]
+
+[[package]]
+name = "sharebin"
+version = "2.0.4"
+dependencies = [
+ "actix-files",
+ "actix-multipart",
+ "actix-web",
+ "actix-web-httpauth",
+ "askama",
+ "askama-filters",
+ "bytesize",
+ "chrono",
+ "clap",
+ "env_logger",
+ "futures",
+ "harsh",
+ "html-escape",
+ "lazy_static",
+ "linkify",
+ "log",
+ "magic-crypt",
+ "mime_guess",
+ "once_cell",
+ "openssl",
+ "qrcode-generator",
+ "rand",
+ "reqwest",
+ "rusqlite",
+ "rust-embed",
+ "sanitize-filename",
+ "serde",
+ "serde_json",
+ "syntect",
 ]
 
 [[package]]
