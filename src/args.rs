@@ -121,9 +121,6 @@ pub struct Args {
     #[clap(long, env = "SHAREBIN_LIST_SERVER")]
     pub list_server: bool,
 
-    #[clap(long, env = "SHAREBIN_DISABLE_TELEMETRY")]
-    pub disable_telemetry: bool,
-
     #[clap(long, env = "SHAREBIN_DISABLE_UPDATE_CHECKING")]
     pub disable_update_checking: bool,
 
@@ -205,7 +202,6 @@ impl Args {
             no_file_upload: self.no_file_upload,
             custom_css: self.custom_css,
             hash_ids: self.hash_ids,
-            disable_telemetry: self.disable_telemetry,
             encryption_client_side: self.encryption_client_side,
             encryption_server_side: self.encryption_server_side,
             max_file_size_encrypted_mb: self.max_file_size_encrypted_mb,
