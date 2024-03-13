@@ -2,7 +2,7 @@
 
 <p style="font-size: small; text-align: center;margin-top: 2rem;">
     {% if args.footer_text.as_ref().is_some() %}
-        {{ args.footer_text.as_ref().unwrap() | safe }}
+        {{ args.footer_text.as_ref().unwrap()|safe }}
     {%- endif %}
 </p>
 
