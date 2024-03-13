@@ -11,5 +11,5 @@ target/
 
 pasta_data/*
 sharebin_data/*
-*.env
+.env
 **/**/sharebin-data

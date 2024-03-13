@@ -20,7 +20,7 @@ pub static CURRENT_VERSION: Lazy<Version> = Lazy::new(|| Version {
 
 impl Version {
     pub fn newer_than(&self, other: &Version) -> bool {
-        return self.name != other.name
+        return self.name != other.name;
     }
 
     pub fn newer_than_current(&self) -> bool {
@@ -33,6 +33,7 @@ pub async fn fetch_latest_version() -> Option<Version> {
 
     match reqwest::get(url).await.ok() {
         Some(response) => response.json::<Vec<Version>>().await.ok(),
-        None           => None,
-    }.and_then(|versions| { versions.into_iter().next() } )
+        None => None,
+    }
+    .and_then(|versions| versions.into_iter().next())
 }

@@ -11,6 +11,7 @@ use actix_web::middleware::Condition;
 use actix_web::{middleware, web, App, HttpServer};
 use actix_web_httpauth::middleware::HttpAuthentication;
 use chrono::Local;
+use dotenvy::dotenv;
 use env_logger::Builder;
 use log::LevelFilter;
 use std::fs;
@@ -66,6 +67,11 @@ async fn main() -> std::io::Result<()> {
         })
         .filter(None, LevelFilter::Info)
         .init();
+
+    match dotenv() {
+        Ok(_) => log::info!(".env file loaded"),
+        Err(_) => log::warn!(".env file not found"),
+    };
 
     log::info!(
         "ShareBin starting on http://{}:{}",
