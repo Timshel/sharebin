@@ -14,6 +14,8 @@ I have **not** reviewed the cryptography used.
 
 If you need to share truly sensitive information I would recommand using a more established solution (Ex: https://privatebin.info/).
 
+A docker image is available on [DockerHub](https://hub.docker.com/r/timshel/sharebin/tags).
+
 ## Features
 
 - Entirely self-contained executable, ShareBin is a single file!
