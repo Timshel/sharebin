@@ -1,8 +1,8 @@
 [package]
 name = "sharebin"
-version = "2.0.4"
-edition = "2021"
+version = "2.0.5"
 authors = ["Timshel"]
+edition = "2021"
 license = "BSD-3-Clause"
 description = "Simple, performant, configurable, entirely self-contained Pastebin and URL shortener."
 readme = "README.md"

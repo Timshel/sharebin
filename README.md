@@ -1,10 +1,6 @@
-
-![Screenshot](.github/index.png)
-
 # ShareBin
 
 ![Build](https://github.com/timshel/sharebin/actions/workflows/rust.yml/badge.svg)
-[![Docker Image](https://github.com/timshel/sharebin/actions/workflows/release.yml/badge.svg)](https://hub.docker.com/r/timshel/sharebin)
 [![Docker Pulls](https://img.shields.io/docker/pulls/timshel/sharebin?label=Docker%20pulls)](https://img.shields.io/docker/pulls/timshel/sharebin?label=Docker%20pulls)
 
 ShareBin is a super tiny, feature rich, configurable, self-contained and self-hosted paste bin web application. It is very easy to set up and use, and will only require a few megabytes of memory and disk storage. It takes only a couple minutes to set it up, why not give it a try now?
@@ -12,6 +8,11 @@ ShareBin is a super tiny, feature rich, configurable, self-contained and self-ho
 ## Forked
 
 This a Fork of [MicroBin](https://github.com/szabodanika/microbin) made by Dániel Szabó.
+
+Forked the project to update dependencies, make minor fixes and gauge interest in continuing it.
+I have **not** reviewed the cryptography used.
+
+If you need to share truly sensitive information I would recommand using a more established solution (Ex: https://privatebin.info/).
 
 ## Features
 
