@@ -1,4 +1,9 @@
+## 2.0.6
+
+- Use the editable Args when creating Pasta
+
 ## 2.0.5
+
 - Update dependencies
 - Fix SHAREBIN_DATA_DIR attachments to work with absolute path
 - Use dotenvy to load .env file
