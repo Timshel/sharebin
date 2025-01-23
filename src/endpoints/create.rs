@@ -58,9 +58,9 @@ pub fn expiration_to_timestamp(expiration: &str, timenow: i64) -> i64 {
         "1week" => timenow + 60 * 60 * 24 * 7,
         "never" => {
             if ARGS.eternal_pasta {
-                timenow + 60 * 60 * 24 * 7
-            } else {
                 0
+            } else {
+                timenow + 60 * 60 * 24 * 7
             }
         }
         _ => {
@@ -70,6 +70,10 @@ pub fn expiration_to_timestamp(expiration: &str, timenow: i64) -> i64 {
     }
 }
 
+/// receives a file through http Post on url /upload/a-b-c with a, b and c
+/// different animals. The client sends the post in response to a form.
+// TODO: form field order might need to be changed. In my testing the attachment 
+// data is nestled between password encryption key etc <21-10-24, dvdsk> 
 pub async fn create(
     data: web::Data<AppState>,
     mut payload: Multipart,
@@ -108,7 +112,10 @@ pub async fn create(
     let mut uploader_password = String::from("");
 
     while let Some(mut field) = payload.try_next().await? {
-        match field.name() {
+        let Some(field_name) = field.name() else {
+            continue;
+        };
+        match field_name {
             "uploader_password" => {
                 while let Some(chunk) = field.try_next().await? {
                     uploader_password
@@ -212,7 +219,7 @@ pub async fn create(
                     continue;
                 }
 
-                let path = field.content_disposition().get_filename();
+                let path = field.content_disposition().and_then(|cd| cd.get_filename());
 
                 let path = match path {
                     Some("") => continue,
