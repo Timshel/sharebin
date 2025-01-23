@@ -1,3 +1,7 @@
+## 2.0.8
+
+- Fix feature `no-c-deps`
+
 ## 2.0.7
 
 - Merge change from https://github.com/szabodanika/microbin/commits/master/
