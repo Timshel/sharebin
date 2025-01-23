@@ -1,6 +1,6 @@
 [package]
 name = "sharebin"
-version = "2.0.6"
+version = "2.0.7"
 authors = ["Timshel"]
 edition = "2021"
 license = "BSD-3-Clause"
