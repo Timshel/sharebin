@@ -29,10 +29,10 @@ pub mod util {
     #[cfg(feature = "default")]
     pub mod db_sqlite;
     pub mod hashids;
+    pub mod http_client;
     pub mod misc;
     pub mod syntaxhighlighter;
     pub mod version;
-    pub mod http_client;
 }
 
 pub mod endpoints {
