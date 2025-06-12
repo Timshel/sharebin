@@ -89,7 +89,7 @@ pub async fn create(
     } as i64;
 
     let mut new_pasta = Pasta {
-        id: rand::thread_rng().gen::<u16>() as u64,
+        id: rand::rng().random::<u16>() as u64,
         content: String::from(""),
         file: None,
         extension: String::from(""),

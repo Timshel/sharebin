@@ -1,3 +1,7 @@
+## 2.0.9
+
+- Stop escaping when editing content
+
 ## 2.0.8
 
 - Fix feature `no-c-deps`
