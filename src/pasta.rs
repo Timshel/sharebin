@@ -260,6 +260,10 @@ impl Pasta {
         )
         .to_string()
     }
+
+    pub fn content_html_escaped(&self) -> String {
+        html_escape::encode_text(&self.content).to_string()
+    }
 }
 
 impl fmt::Display for Pasta {
